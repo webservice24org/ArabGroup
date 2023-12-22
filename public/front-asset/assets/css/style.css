@@ -148,6 +148,9 @@ a:hover{
 .heading {
     text-align: center;
 }
+.header-logo img {
+    width: 150px;
+}
 .heading span,
 .heading-style-2 .data span {
     font-size: 16px;
