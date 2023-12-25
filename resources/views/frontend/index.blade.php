@@ -6,42 +6,10 @@
 @include('frontend.parts.welcome-message')
 
 @include('frontend.parts.sister-concerns')
+
+@include('frontend.parts.info-counter')
  
 
-  <!-- Counter Style One Start -->
-  <section class="gap no-top counter-style-one">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4" >
-          <div class="counter-data">
-            <div class="counttt">
-                <span class="odometer" data-count="20" data-status="yes">0</span><i>Years</i>
-             
-            </div>
-            <h4>Professional experience</h4>
-          </div>
-        </div>
-        <div class="col-lg-4" >
-          <div class="counter-data upper-space">
-            <div class="counttt">
-              <span class="odometer" data-count="300" data-status="yes">0</span> 
-              <i>People</i>
-            </div>
-            <h4>Employees in team</h4>
-          </div>
-        </div>
-        <div class="col-lg-4" >
-          <div class="counter-data">
-            <div class="counttt">
-              <span class="odometer" data-count="350" data-status="yes">0</span><i>Locations</i>
-            </div>
-            <h4>Sites in development</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Counter Style One End -->
 
   <!-- Project Style One Start -->
   <section class="gap project-style-one light-bg-color">

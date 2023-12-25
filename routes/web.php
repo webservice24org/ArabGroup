@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\FrontEnd\AddressCardController;
 use App\Http\Controllers\FrontEnd\CompanyIntroController;
 use App\Http\Controllers\FrontEnd\HeaderController;
+use App\Http\Controllers\FrontEnd\InfoCounterController;
+use App\Http\Controllers\FrontEnd\SisterConcernController;
 use App\Http\Controllers\FrontEnd\SliderController;
 use App\Http\Controllers\FrontEnd\WelcomeMessageController;
 use Illuminate\Support\Facades\Route;
@@ -49,7 +51,22 @@ Route::middleware([
     
     Route::get('/welcome', [WelcomeMessageController::class, 'editWelcome'])->name('editWelcome');
     Route::post('/welcome', [WelcomeMessageController::class, 'welcomeSave'])->name('welcomeSave');
+    
+    Route::get('/sister-concern-section-header', [SisterConcernController::class, 'ConcernHeader'])->name('concern.sec.header');
+    Route::post('/sister-concern-section-header', [SisterConcernController::class, 'ConcernHeaderSave'])->name('save.sec.header');
+    Route::get('/sister-concerns', [SisterConcernController::class, 'allConcerns'])->name('all.concerns');
+    Route::get('/concern-create', [SisterConcernController::class, 'addConcern'])->name('add.concern');
+    Route::post('/concern-create', [SisterConcernController::class, 'saveConcern'])->name('save.concern');
+    Route::get('/concern-edit/{id}', [SisterConcernController::class, 'editConcern'])->name('edit.concern');
+    Route::post('/concern-edit', [SisterConcernController::class, 'updateConcern'])->name('update.concern');
+    Route::get('/concern-trash/{id}', [SisterConcernController::class, 'trashConcern'])->name('trash.concern');
+    Route::get('/concerns-trashed', [SisterConcernController::class, 'trashedConcerns'])->name('trashed.concern');
+    Route::get('/concern-restore/{id}', [SisterConcernController::class, 'restoreConcern'])->name('restore.concern');
+        
+    Route::get('/sister-concerns/{id}', [SisterConcernController::class, 'status'])->name('status');
 
+    Route::get('/info-counters', [InfoCounterController::class, 'infoCounters'])->name('infoCounters');
+    Route::get('/info-counters/{id}', [InfoCounterController::class, 'infoCounterEdit'])->name('infoCounterEdit');
 
 });
 

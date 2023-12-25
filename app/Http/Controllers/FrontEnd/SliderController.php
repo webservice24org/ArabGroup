@@ -49,7 +49,6 @@ class SliderController extends Controller
             $slider->slider_img=$slider_old_img;
         }
         
-
         $slider->save();
 
         $notification = array(

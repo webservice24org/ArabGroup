@@ -65,8 +65,8 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">{{__('Custom Settings')}}</h6>
                 <a class="collapse-item" href="{{route('editWelcome')}}">{{__('Home Welcome Message')}}</a>
-                <a class="collapse-item" href="utilities-border.html">Borders</a>
-                <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                <a class="collapse-item" href="{{route('all.concerns')}}">{{__('Sister Concerns')}}</a>
+                <a class="collapse-item" href="{{route('infoCounters')}}">{{__('Info Counters')}}</a>
                 <a class="collapse-item" href="utilities-other.html">Other</a>
             </div>
         </div>
