@@ -20,6 +20,8 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
     <!-- Custom styles for this template-->
     <link href="{{asset('backend-asset/css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <script src="{{asset('backend-asset/js/axios.min.js')}}"></script>
+    <script src="{{asset('backend-asset/js/script.js')}}"></script>
 
 </head>
 
@@ -89,7 +91,7 @@
     <script src="{{asset('backend-asset/js/demo/chart-pie-demo.js')}}"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
+    
     <script>
 		
     	$(document).ready(function(){

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\FrontEnd\AddressCardController;
+use App\Http\Controllers\FrontEnd\BlgoCategoryController;
 use App\Http\Controllers\FrontEnd\CompanyIntroController;
 use App\Http\Controllers\FrontEnd\HeaderController;
 use App\Http\Controllers\FrontEnd\InfoCounterController;
@@ -67,6 +68,13 @@ Route::middleware([
 
     Route::get('/info-counters', [InfoCounterController::class, 'infoCounters'])->name('infoCounters');
     Route::get('/info-counters/{id}', [InfoCounterController::class, 'infoCounterEdit'])->name('infoCounterEdit');
+
+    Route::get('/blogs', [BlgoCategoryController::class, 'index'])->name('categories.index');
+    Route::get('/blogs/{category}', [BlgoCategoryController::class, 'show'])->name('categories.show');
+    Route::post('/blogs', [BlgoCategoryController::class, 'store'])->name('categories.store');
+    Route::put('/blogs/{category}', [BlgoCategoryController::class, 'update'])->name('categories.update');
+    Route::delete('/blogs/{category}', [BlgoCategoryController::class, 'destroy'])->name('categories.destroy');
+    
 
 });
 
