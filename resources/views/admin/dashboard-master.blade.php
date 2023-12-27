@@ -16,10 +16,11 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+        
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
     <!-- Custom styles for this template-->
     <link href="{{asset('backend-asset/css/sb-admin-2.min.css')}}" rel="stylesheet">
+   
     <script src="{{asset('backend-asset/js/axios.min.js')}}"></script>
     <script src="{{asset('backend-asset/js/script.js')}}"></script>
 
@@ -76,7 +77,7 @@
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('backend-asset/vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('backend-asset/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
+   
     <!-- Core plugin JavaScript-->
     <script src="{{asset('backend-asset/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 

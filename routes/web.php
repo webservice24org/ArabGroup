@@ -69,6 +69,8 @@ Route::middleware([
     Route::get('/info-counters', [InfoCounterController::class, 'infoCounters'])->name('infoCounters');
     Route::get('/info-counters/{id}', [InfoCounterController::class, 'infoCounterEdit'])->name('infoCounterEdit');
 
+    //Route::view('/blogs', 'admin/blogs/categories');
+
     Route::get('/blogs', [BlgoCategoryController::class, 'index'])->name('categories.index');
     Route::get('/blogs/{category}', [BlgoCategoryController::class, 'show'])->name('categories.show');
     Route::post('/blogs', [BlgoCategoryController::class, 'store'])->name('categories.store');

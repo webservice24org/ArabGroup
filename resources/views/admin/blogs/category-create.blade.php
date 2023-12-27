@@ -39,15 +39,19 @@
         }
 
         try{
-            showLoader();
-            closeModal('categoryModal');
+            function showLoader() {
+                document.getElementById('loader').classList.remove('d-none')
+            }
+            
+            //closeModal('categoryModal');
+            $("#categoryModal").modal('hide');
             const response = await axios.post("/blogs", {
                 category_name: categoryName
             });
 
             if (response.status === 201) {
                 document.getElementById("category-form").reset();
-               //await getList(currentPage);
+               await getList(currentPage);
             }else{
                 alert("Rquest Faild!");
             }
@@ -55,7 +59,10 @@
             console.error("Error Creating Category", error);
             alert("An error occurred while saving Category Name.");
         }finally{
-            hideLoader();
+            function hideLoader() {
+                document.getElementById('loader').classList.add('d-none')
+            }
+
         }
     }
 </script>
